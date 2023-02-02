@@ -257,6 +257,7 @@
 
 	};
 
+
 	// var handleTodaysDate = function(){
 	// 	const timeDisplay = document.getElementsByClassName("date-in");
   	// 	const dateString = new Date().toLocaleString();
