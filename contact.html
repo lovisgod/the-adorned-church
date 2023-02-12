@@ -46,6 +46,10 @@
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<!--Sweet alert library js-->
+
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -120,22 +124,22 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
+								<input type="text" class="form-control contact_input" placeholder="Name">
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email">
+								<input type="text" class="form-control contact_input" placeholder="Email">
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+								<textarea name="" class="form-control contact_input" id="" cols="30" rows="7" placeholder="Message"></textarea>
 							</div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<input type="submit" value="Send Message" class="btn btn-primary btn-modify">
+								<input type="submit" value="Send Message" class="btn btn-primary btn-modify" id="submit_btn" onclick="sendContact()">
 							</div>
 						</div>
 					</div>
@@ -208,6 +212,10 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
 	</div>
+
+
+	<!--- API calls-->
+	<script src="js/api.js"></script>s
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>

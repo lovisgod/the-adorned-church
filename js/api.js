@@ -26,4 +26,65 @@ function fetchMessages() {
     })
 }
 
+
+function sendContact(){
+    const formGroups = document.getElementsByClassName("contact_input");
+    console.log(formGroups);
+    const name = formGroups[0].value
+    const email = formGroups[1].value
+    const message = formGroups[2].value
+    console.log(`${name}${email}${message}`);
+
+    
+    swal({
+        text: 'You want to proceed?',
+        button: {
+          text: "Yes, Please proceed",
+          closeModal: false,
+        },
+      })
+      .then(xx => {
+
+        const data = {
+            data: {
+                name: name,
+                email: email,
+                message_to_church: message
+            }
+        }
+        fetch(`${BASE_URL}/api/contacts`, {
+            method: 'POST',
+            headers: {
+             'Content-Type': 'application/json',
+        },
+            body: JSON.stringify(data),
+        })
+        .then(results => {
+            console.log(results.json());
+            return results;
+          })
+          .then(response => {
+            console.log(response)
+            return response
+          })
+          .then(ressss => console.log(ressss));
+      })
+      .then(json => {
+        console.log(json)
+        swal({
+          title: "We received your message and will get back to you soon",
+          text: name,
+          icon: 'success',
+        });
+      })
+      .catch(err => {
+        if (err) {
+          console.log(err);  
+          swal("Oh noes!", "The request failed!", "error");
+        } else {
+          swal.stopLoading();
+          swal.close();
+        }
+      });
+}
 fetchMessages();
