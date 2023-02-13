@@ -12,7 +12,7 @@ function fetchMessages() {
             <div class="sermon-entry">
                 <div class="sermon" style="background-image: url(${BASE_URL}${message.attributes.track_cover.data.attributes.url});">
                     <div class="play">
-                        <a class="popup-vimeo" href=${BASE_URL}${message.attributes.track.data.attributes.url}><i class="icon-play3"></i></a>
+                    <a id="open_btn" data-toggle="modal" data-target="#modalAudio" onclick="playAudio('${BASE_URL}${message.attributes.track.data.attributes.url}')"><i class="icon-play3"></i></a>
                     </div>
                 </div>
                 <h3>${message.attributes.Title}</h3>
@@ -26,6 +26,21 @@ function fetchMessages() {
     })
 }
 
+
+function playAudio(url) {
+   setTimeout(() => {
+  const audioPlayer = document.getElementById('audio_player')
+  const audioSource = document.getElementById('adorned_src')
+  audioPlayer.src = url
+  audioPlayer.pause();
+  audioPlayer.play()
+ }, 2000);
+}
+
+function checkAudioModalClose() {
+  const audioPlayer = document.getElementById('audio_player')
+  audioPlayer.pause();
+}
 
 function sendContact(){
     const formGroups = document.getElementsByClassName("contact_input");
@@ -88,3 +103,4 @@ function sendContact(){
       });
 }
 fetchMessages();
+checkModalClose();

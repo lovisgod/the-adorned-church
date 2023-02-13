@@ -127,7 +127,7 @@
 					   					<h1 style="font-size: 40px;">We are the Adorned</h1>
 											<h2>Furnished with Glory.  
 												Prepared for His coming.</h2>
-											<p><a class="btn btn-primary btn-demo" href="" data-toggle="modal" data-target="#modalMontaj> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn" href="contact.html">Join us here! <i class="icon-arrow-right3"></i></a></p>
+											<p><a class="btn btn-primary btn-demo" href="" data-toggle="modal" data-target="#modalMontaj"> <i class="icon-play4"></i> Watch Video</a> <a class="btn btn-primary btn-learn" href="contact.html">Join us here! <i class="icon-arrow-right3"></i></a></p>
 					   				</div>
 					   			</div>
 				   			</div>
@@ -253,6 +253,25 @@
 						<span>Pstr. John Doe</span>
 					</div>
 				</div> -->
+			</div>
+		</div>
+		<div id="modalAudio" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="text-align-last: center">Message</h4>
+					</div>
+					<div class="modal-body">
+						<audio id="audio_player" controls controlsList="download" style="width:100%">
+							<source id="adorned_src">
+						</audio>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="checkAudioModalClose()">Close</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div id="fh5co-bible-verse">
