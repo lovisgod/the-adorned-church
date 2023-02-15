@@ -103,14 +103,37 @@
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
 					<h2>Our Sermons</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<p>Thy Word is a lamp unto my feet, and a light unto my path.</p>
 				</div>
 			</div>
 			<div class="row" id="sermon_container">
 			   
 			</div>
+
+
 		</div>
-		<div id="fh5co-counter" class="fh5co-counters fh5co-light-grey">
+
+		<div id="modalAudio" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<!-- Modal content-->
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title" style="text-align-last: center">Message</h4>
+					</div>
+					<div class="modal-body">
+						<audio id="audio_player" controls controlsList="download" style="width:100%">
+							<source id="adorned_src">
+						</audio>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal" onclick="checkAudioModalClose()">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<!-- <div id="fh5co-counter" class="fh5co-counters fh5co-light-grey">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center animate-box">
 					<p>We have a fun facts far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
@@ -139,7 +162,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 	<!-- END container-wrap -->
 
