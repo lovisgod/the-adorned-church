@@ -1,4 +1,5 @@
-var BASE_URL = "http://localhost:1337"
+// var BASE_URL = "http://localhost:1337"
+var BASE_URL = "https://adorned-cms.uc.r.appspot.com"
 
 
 function fetchMessages() {
@@ -10,9 +11,9 @@ function fetchMessages() {
         data.data.forEach(message => {
             const messaageElement = `<div class="col-md-4 text-center">
             <div class="sermon-entry">
-                <div class="sermon" style="background-image: url(${BASE_URL}${message.attributes.track_cover.data.attributes.url});">
+                <div class="sermon" style="background-image: url(${message.attributes.track_cover});">
                     <div class="play">
-                    <a id="open_btn" data-toggle="modal" data-target="#modalAudio" onclick="playAudio('${BASE_URL}${message.attributes.track.data.attributes.url}')"><i class="icon-play3"></i></a>
+                    <a id="open_btn" data-toggle="modal" data-target="#modalAudio" onclick="playAudio('${message.attributes.track}')"><i class="icon-play3"></i></a>
                     </div>
                 </div>
                 <h3>${message.attributes.Title}</h3>
@@ -103,4 +104,4 @@ function sendContact(){
       });
 }
 fetchMessages();
-checkModalClose();
+// checkModalClose();
